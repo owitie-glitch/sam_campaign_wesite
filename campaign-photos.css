@@ -1,0 +1,379 @@
+.campaign-photo-stack { position: relative; min-height: 500px; }
+.campaign-photo-stack figure { margin: 0; overflow: hidden; background: #dfe2ec; box-shadow: 0 24px 60px rgba(5,6,56,.2); }
+.campaign-photo-stack img, .community-banner-photo img, .photo-news-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.photo-stack-main { position: absolute; inset: 0 80px 35px 0; }
+.photo-stack-main img { object-position: center 62%; }
+.photo-stack-main figcaption { position: absolute; left: 0; bottom: 0; padding: 13px 18px; background: #e31325; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.photo-stack-small { position: absolute; right: 0; bottom: 0; width: 42%; height: 245px; border: 8px solid #fafafd; }
+.photo-stack-small img { object-position: 40% center; }
+.community-banner { position: relative; }
+.community-banner::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(5,6,56,.15),rgba(5,6,56,.55)); pointer-events: none; }
+.community-banner .support-grid { position: relative; z-index: 1; }
+.community-banner-photo { position: relative; height: 360px; border: 8px solid rgba(255,255,255,.12); box-shadow: 0 26px 55px rgba(0,0,0,.28); overflow: hidden; }
+.community-banner-photo img { object-position: center 45%; }
+.community-banner-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg,transparent 55%,rgba(5,6,56,.82)); }
+.community-banner-photo span { position: absolute; z-index: 1; left: 20px; bottom: 16px; color: #fff; font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.photo-news-art { padding: 0; background: #090b55; }
+.photo-news-art img { transition: transform .45s ease; }
+.news-card:hover .photo-news-art img { transform: scale(1.04); }
+.photo-news-art::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(180deg,rgba(5,6,56,.2),rgba(5,6,56,.75)); }
+.photo-news-art::after { z-index: 1; }
+.photo-news-art span { position: absolute; z-index: 2; top: 20px; left: 20px; }
+.photo-news-art strong { z-index: 2; }
+@media (max-width:900px) { .campaign-photo-stack { min-height:480px; } .community-banner-photo { height:330px; } }
+@media (max-width:560px) { .campaign-photo-stack { min-height:410px; } .photo-stack-main { right:45px; bottom:28px; } .photo-stack-small { width:46%; height:190px; border-width:6px; } .community-banner-photo { height:270px; } }
+
+.community-story { position: relative; isolation: isolate; overflow: hidden; background: #080a45; color: #fff; }
+.community-story-bg { position: absolute; z-index: -2; inset: 0; background: url("Judie%20Sheila/IMG_8688.JPG.jpeg") center 45%/cover no-repeat; opacity: .16; filter: grayscale(.15); }
+.community-story::after { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(180deg,transparent 68%,rgba(82,84,129,.18) 79%,rgba(188,190,211,.58) 91%,#f1f2f9 100%),linear-gradient(100deg,rgba(5,6,56,.98) 8%,rgba(5,6,56,.9) 48%,rgba(5,6,56,.64)); }
+.community-story-grid { display: grid; grid-template-columns: .95fr 1.05fr; gap: 8%; align-items: center; }
+.community-story h2 { color: #fff; font-size: clamp(42px,4.8vw,64px); }
+.community-story h2 em { color: #ff6371; }
+.community-lead { max-width: 590px; color: #d8daec; font-size: 16px; }
+.community-values { display: grid; gap: 1px; margin: 28px 0; background: rgba(255,255,255,.14); }
+.community-values article { display: grid; grid-template-columns: 42px 1fr; gap: 14px; align-items: center; padding: 14px 16px; background: rgba(5,6,56,.7); backdrop-filter: blur(8px); }
+.community-values b { color: #ff6371; font: 800 13px var(--display); }
+.community-values div { display: grid; }
+.community-values strong { font: 700 13px var(--display); text-transform: uppercase; }
+.community-values span { color: #bfc2dd; font-size: 11px; }
+.facebook-invite { display: grid; grid-template-columns: 46px 1fr auto; gap: 15px; align-items: center; padding: 18px; background: #fff; color: #11132d; box-shadow: 0 18px 45px rgba(0,0,0,.22); }
+.facebook-icon { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: #1877f2; color: #fff; font: 800 25px Arial,sans-serif; }
+.facebook-invite div { display: grid; }
+.facebook-invite small { color: #e31325; font-size: 8px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.facebook-invite strong { color: #090b55; font: 700 14px var(--display); }
+.facebook-invite p { margin: 2px 0 0; color: #697083; font-size: 10px; line-height: 1.45; }
+.facebook-invite a { padding: 11px 13px; background: #1877f2; color: #fff; font-size: 9px; font-weight: 800; text-transform: uppercase; white-space: nowrap; }
+.community-mosaic { position: relative; display: grid; grid-template-columns: 1.15fr .85fr; grid-template-rows: 260px 230px; gap: 12px; min-height: 502px; }
+.community-mosaic figure { margin: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.2); box-shadow: 0 20px 45px rgba(0,0,0,.22); }
+.community-mosaic img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.community-mosaic .mosaic-wide { grid-row: 1/3; }
+.mosaic-wide img { object-position: 44% center; }
+.community-mosaic figure:nth-of-type(2) img { object-position: 38% center; }
+.community-mosaic figure:nth-of-type(3) img { object-position: 62% center; }
+.mosaic-note { position: absolute; right: 18px; bottom: 18px; display: grid; max-width: 205px; padding: 14px 17px; background: #e31325; box-shadow: 0 12px 30px rgba(0,0,0,.3); }
+.mosaic-note b { font: 800 13px var(--display); text-transform: uppercase; }
+.mosaic-note small { color: #ffe1e4; font-size: 9px; }
+
+.focus-strip { position: relative; isolation: isolate; }
+.focus-strip::before { content: ""; position: absolute; z-index: -1; inset: 0 0 auto; height: 55%; background: linear-gradient(rgba(255,255,255,.91),rgba(255,255,255,.98)),url("Judie%20Sheila/IMG_8695.JPG.jpeg") center 54%/cover no-repeat; }
+.updates { position: relative; isolation: isolate; overflow: hidden; }
+.updates::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.9)),url("Judie%20Sheila/IMG_9251.JPG.jpeg") 82% center/cover no-repeat; opacity: .55; }
+
+@media (max-width:900px) {
+  .community-story-grid { grid-template-columns: 1fr; }
+  .community-mosaic { min-height: 470px; grid-template-rows: 240px 218px; }
+}
+@media (max-width:560px) {
+  .facebook-invite { grid-template-columns: 42px 1fr; }
+  .facebook-invite a { grid-column: 1/3; text-align: center; }
+  .community-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: 250px 180px; min-height: 442px; }
+  .community-mosaic .mosaic-wide { grid-column: 1/3; grid-row: auto; }
+  .mosaic-note { right: 10px; bottom: 10px; }
+}
+
+/* Phone-first finishing pass: keeps every section readable from 320px upward. */
+@media (max-width: 600px) {
+  html { scroll-padding-top: 82px; }
+  body { overflow-x: hidden; }
+  img { max-width: 100%; }
+  .container { width: calc(100% - 32px); }
+
+  .utility-inner { height: 34px; }
+  .utility-inner div { width: 100%; justify-content: space-between; gap: 8px; }
+  .utility-inner div span, .utility-inner div a { font-size: 9px; }
+  .navbar { height: 72px; gap: 10px; }
+  .brand { min-width: 0; gap: 8px; }
+  .brand-mark { flex: 0 0 36px; width: 36px; height: 36px; }
+  .brand > span:last-child { min-width: 0; }
+  .brand strong { max-width: 185px; overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+  .brand small { margin-top: 3px; font-size: 7px; }
+  .menu-toggle { min-width: 44px; min-height: 44px; padding: 8px; cursor: pointer; }
+  .nav-links { top: 106px; max-height: calc(100vh - 106px); gap: 2px; padding: 18px 16px 22px; overflow-y: auto; }
+  .nav-links a { width: 100%; min-height: 42px; padding: 10px 4px; border-bottom: 1px solid #ededf3; }
+  .nav-links a::after { bottom: 5px; }
+
+  .hero, .hero-grid { min-height: auto; }
+  .hero-copy { padding: 52px 0 12px; }
+  .hero h1 { max-width: 100%; font-size: clamp(38px, 12vw, 48px); line-height: 1.02; letter-spacing: -.055em; }
+  .hero-copy > p:not(.kicker) { margin: 20px 0 24px; font-size: 14px; }
+  .hero-actions { width: 100%; gap: 15px; }
+  .hero-actions .button { width: 100%; min-height: 48px; }
+  .play-link { min-height: 46px; }
+  .candidate-visual { height: 400px; }
+  .candidate-card { bottom: -35px; width: min(340px, 108vw); height: 430px; }
+  .candidate-ribbon { right: 0; bottom: 22px; font-size: 8px; }
+
+  .section { padding: 70px 0; }
+  .section h2, .support-banner h2, .community-story h2 { font-size: clamp(36px, 11vw, 46px); line-height: 1.02; }
+  .about-grid { gap: 38px; }
+  .facebook-about-visual, .facebook-about-visual > img { min-height: 390px; }
+  .facebook-photo-label { padding: 15px 65px 15px 15px; }
+  .about-copy .lead { font-size: 16px; }
+  .about-page-facts { grid-template-columns: repeat(3, 1fr); }
+  .about-page-facts div { padding: 12px 8px; }
+  .about-page-facts strong { font-size: 14px; }
+  .about-page-facts span { font-size: 6px; }
+  .about-copy .button { width: 100%; min-height: 48px; }
+
+  .community-story-grid { gap: 42px; }
+  .community-lead { font-size: 14px; }
+  .community-values article { grid-template-columns: 34px 1fr; padding: 13px 12px; }
+  .community-mosaic { grid-template-rows: 230px 155px; min-height: 397px; gap: 8px; }
+  .mosaic-note { max-width: 170px; padding: 10px 12px; }
+
+  .focus-strip { padding: 70px 0; }
+  .focus-intro { margin-bottom: 30px; }
+  .focus-grid article { min-height: 0; padding: 25px 22px; border-radius: 14px; }
+  .focus-detail { padding: 24px 19px; border-radius: 14px; }
+  .focus-detail h3 { font-size: 21px; }
+
+  .contribute-grid { gap: 34px; }
+  .number-panel { padding: 18px 15px; }
+  .number-panel a { overflow-wrap: anywhere; font-size: clamp(24px, 9vw, 34px); }
+  .copy-number { min-height: 44px; }
+  .campaign-photo-stack { min-height: 385px; }
+  .photo-stack-main { right: 36px; }
+  .photo-stack-small { height: 170px; }
+
+  .support-banner { padding: 70px 0; }
+  .support-grid { gap: 34px; }
+  .community-banner-photo { height: 250px; border-width: 5px; }
+  .support-banner .button { width: 100%; min-height: 48px; }
+  .section-title { margin-bottom: 30px; }
+  .news-grid { gap: 16px; }
+  .news-art { height: 205px; }
+  .news-content { padding: 20px; }
+  .commitment-toggle { min-height: 44px; }
+
+  .ballot-support-grid { gap: 20px; }
+  .interactive-ballot-wrap { min-height: 385px; }
+  .interactive-ballot { width: min(300px, 100%); height: 370px; }
+  .ballot-machine { right: 4px; left: 4px; }
+  .ballot-message { margin-top: 0; }
+
+  .footer-main { gap: 32px; }
+  footer { padding-top: 58px; }
+  .footer-main > div > a:not(.brand):not(.social-link) { min-height: 38px; padding: 7px 0; }
+  .footer-bottom { margin-top: 38px; }
+}
+
+@media (max-width: 360px) {
+  .container { width: calc(100% - 24px); }
+  .brand strong { max-width: 160px; }
+  .hero h1 { font-size: 37px; }
+  .candidate-visual { height: 365px; }
+  .candidate-card { width: 310px; height: 395px; }
+  .community-mosaic { grid-template-rows: 210px 145px; min-height: 367px; }
+  .facebook-invite { padding: 14px; }
+}
+
+/* Slow-moving atmospheric gradients behind the interactive ballot. */
+.ballot-support { isolation: isolate; }
+.ballot-support::before { z-index: -2; }
+.ballot-support-grid { position: relative; z-index: 2; }
+.ballot-orbs { position: absolute; z-index: 0; inset: 0; overflow: hidden; pointer-events: none; }
+.ballot-orb { position: absolute; display: block; border-radius: 50%; opacity: .42; filter: blur(4px); will-change: transform; }
+.orb-one { width: 420px; height: 420px; top: -18%; left: -7%; background: radial-gradient(circle at 36% 34%,rgba(71,105,255,.62),rgba(22,40,154,.24) 58%,transparent 72%); animation: orbDriftOne 17s ease-in-out infinite alternate; }
+.orb-two { width: 520px; height: 520px; right: -10%; top: -20%; border: 72px solid rgba(89,103,221,.13); background: radial-gradient(circle,rgba(25,35,130,.25),transparent 66%); animation: orbDriftTwo 22s ease-in-out infinite alternate; }
+.orb-three { width: 330px; height: 330px; left: 39%; bottom: -28%; background: radial-gradient(circle at 48% 45%,rgba(227,19,37,.27),rgba(119,30,111,.16) 45%,transparent 71%); filter: blur(12px); animation: orbDriftThree 19s ease-in-out infinite alternate; }
+.orb-four { width: 250px; height: 250px; right: 29%; top: 12%; border: 42px solid rgba(255,255,255,.055); opacity: .55; animation: orbDriftFour 14s ease-in-out infinite alternate; }
+
+@keyframes orbDriftOne {
+  0% { transform: translate3d(0,0,0) scale(1); }
+  50% { transform: translate3d(90px,45px,0) scale(1.13); }
+  100% { transform: translate3d(35px,150px,0) scale(.92); }
+}
+@keyframes orbDriftTwo {
+  0% { transform: translate3d(0,0,0) rotate(0deg) scale(1); }
+  50% { transform: translate3d(-100px,80px,0) rotate(18deg) scale(.9); }
+  100% { transform: translate3d(-35px,170px,0) rotate(-8deg) scale(1.08); }
+}
+@keyframes orbDriftThree {
+  0% { transform: translate3d(-45px,0,0) scale(.9); }
+  50% { transform: translate3d(80px,-125px,0) scale(1.2); }
+  100% { transform: translate3d(210px,-40px,0) scale(1); }
+}
+@keyframes orbDriftFour {
+  0% { transform: translate3d(0,0,0) scale(.85); }
+  100% { transform: translate3d(-190px,170px,0) scale(1.18); }
+}
+
+@media (max-width: 600px) {
+  .ballot-orb { opacity: .3; filter: blur(8px); }
+  .orb-one { width: 260px; height: 260px; }
+  .orb-two { width: 330px; height: 330px; border-width: 48px; right: -45%; }
+  .orb-three { width: 230px; height: 230px; left: 5%; }
+  .orb-four { width: 180px; height: 180px; right: -12%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ballot-orb { animation: none; }
+}
+
+.news-grid { align-items: start; }
+.commitment-card:has(.commitment-details:not([hidden])) { border-color: rgba(227,19,37,.28); box-shadow: 0 24px 60px rgba(9,11,85,.14); }
+.commitment-details:not([hidden]) { display: block; animation: commitmentReveal .38s ease both; }
+.commitment-summary { margin: 4px 0 14px; padding: 12px; border-left: 3px solid #e31325; background: #f7f7fb; color: #4f566a !important; font-size: 11px !important; }
+.commitment-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 18px; }
+.commitment-gallery figure { position: relative; height: 145px; margin: 0; overflow: hidden; background: #dfe2ec; }
+.commitment-gallery img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.commitment-gallery figure:hover img { transform: scale(1.05); }
+.commitment-gallery figure::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent,rgba(5,6,56,.82)); }
+.commitment-gallery figcaption { position: absolute; z-index: 1; left: 10px; bottom: 8px; color: #fff; font-size: 8px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.commitment-card:nth-child(1) .commitment-gallery figure:first-child img { object-position: center 68%; }
+.commitment-card:nth-child(2) .commitment-gallery figure:first-child img { object-position: center 66%; }
+.commitment-card:nth-child(2) .commitment-gallery figure:last-child img { object-position: center 36%; }
+.commitment-card:nth-child(3) .commitment-gallery figure:first-child img { object-position: center 70%; }
+.commitment-card:nth-child(3) .commitment-gallery figure:last-child img { object-position: center 30%; }
+
+@keyframes commitmentReveal {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .commitment-gallery figure { height: 135px; }
+}
+
+@media (max-width: 360px) {
+  .commitment-gallery { grid-template-columns: 1fr; }
+  .commitment-gallery figure { height: 175px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .commitment-details:not([hidden]) { animation: none; }
+  .commitment-gallery img { transition: none; }
+}
+
+.ground-report .support-grid { grid-template-columns: .88fr 1.12fr; gap: 6%; }
+.ground-report .community-banner-photo { height: 590px; }
+.ground-report .community-banner-photo img { object-position: center; }
+.ground-report h2 { font-size: clamp(38px,4.1vw,58px); }
+.ground-report h2 em { color: #ff6573; font-family: Georgia,serif; font-weight: 400; }
+.ground-report-copy > p:not(.kicker) { margin: 18px 0 24px; }
+.whatsapp-report-form { display: grid; gap: 14px; }
+.report-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.whatsapp-report-form label { display: grid; gap: 6px; }
+.whatsapp-report-form label > span { color: #f1f2ff; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.whatsapp-report-form input, .whatsapp-report-form select, .whatsapp-report-form textarea { width: 100%; min-width: 0; border: 1px solid rgba(255,255,255,.22); border-radius: 3px; outline: 0; background: rgba(255,255,255,.1); color: #fff; font: 500 12px var(--sans); transition: border-color .2s,background .2s,box-shadow .2s; }
+.whatsapp-report-form input, .whatsapp-report-form select { height: 46px; padding: 0 13px; }
+.whatsapp-report-form textarea { min-height: 105px; padding: 12px 13px; resize: vertical; }
+.whatsapp-report-form input::placeholder, .whatsapp-report-form textarea::placeholder { color: #aeb2d1; }
+.whatsapp-report-form select option { background: #090b55; color: #fff; }
+.whatsapp-report-form input:focus, .whatsapp-report-form select:focus, .whatsapp-report-form textarea:focus { border-color: #62d77a; background: rgba(255,255,255,.15); box-shadow: 0 0 0 3px rgba(37,211,102,.13); }
+.whatsapp-report-button { justify-self: start; border: 0; background: #25d366; color: #071c32; cursor: pointer; }
+.whatsapp-report-button:hover { background: #52df82; transform: translateY(-2px); }
+.whatsapp-mark { display: grid; width: 21px; height: 21px; place-items: center; border: 2px solid currentColor; border-radius: 50%; font-size: 13px; }
+.report-privacy { margin: -3px 0 0 !important; color: #9da2c5 !important; font-size: 9px !important; }
+.report-status { min-height: 16px; margin: -8px 0 0 !important; color: #75e39c !important; font-size: 10px !important; font-weight: 700; }
+
+@media (max-width: 900px) {
+  .ground-report .support-grid { grid-template-columns: 1fr; }
+  .ground-report .community-banner-photo { height: 380px; }
+}
+
+@media (max-width: 600px) {
+  .ground-report .community-banner-photo { height: 250px; }
+  .report-fields { grid-template-columns: 1fr; }
+  .whatsapp-report-form input, .whatsapp-report-form select { height: 48px; }
+  .whatsapp-report-form textarea { min-height: 125px; }
+  .whatsapp-report-button { width: 100%; min-height: 50px; }
+}
+
+/* A quiet, floating Kenyan flag woven into the About section background. */
+.about { position: relative; isolation: isolate; overflow: hidden; }
+.about::before { content: ""; position: absolute; z-index: 1; top: 0; right: 0; left: 0; height: 210px; background: linear-gradient(180deg,#eef0fb 0%,rgba(242,243,250,.92) 22%,rgba(250,250,253,.58) 58%,transparent 100%); pointer-events: none; }
+.about::after { content: ""; position: absolute; z-index: 1; top: -1px; right: 0; left: 0; height: 34px; background: linear-gradient(90deg,rgba(207,211,241,.28),rgba(255,255,255,.82) 45%,rgba(247,199,203,.24)); filter: blur(14px); opacity: .8; pointer-events: none; }
+.about-grid { position: relative; z-index: 2; }
+.kenya-flag-veil { position: absolute; z-index: 0; inset: 0; width: 100%; height: 100%; perspective: 1200px; pointer-events: none; opacity: .09; filter: saturate(.85); overflow: hidden; }
+.kenya-flag-fabric { position: absolute; top: -9%; right: -9%; bottom: -9%; left: -9%; border-radius: 8% 5% 7% 6% / 5% 8% 6% 7%; background: url("assets/kenyan-flag-fabric.png") center/cover no-repeat; box-shadow: 0 25px 70px rgba(9,11,85,.18); transform-origin: center; animation: kenyaFlagFloat 9s ease-in-out infinite alternate; overflow: hidden; }
+.kenya-flag-fabric::before { content: ""; position: absolute; inset: -18% -10%; background: repeating-linear-gradient(96deg,transparent 0 70px,rgba(255,255,255,.28) 92px,transparent 125px); mix-blend-mode: soft-light; animation: kenyaFabricLight 6s linear infinite; }
+.kenya-flag-fabric::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg,rgba(255,255,255,.42),transparent 18%,rgba(0,0,0,.2) 39%,transparent 58%,rgba(255,255,255,.32) 77%,transparent); transform: translateX(-25%); animation: kenyaFlagSheen 7s ease-in-out infinite alternate; }
+
+@keyframes kenyaFlagFloat {
+  0% { transform: translate3d(0,-12px,0) rotate(-2deg) rotateY(-7deg) skewY(-1.5deg) scaleX(.98); }
+  45% { border-radius: 42% 9% 50% 4% / 18% 28% 9% 34%; transform: translate3d(-35px,15px,0) rotate(1deg) rotateY(8deg) skewY(1.4deg) scaleX(1.025); }
+  100% { border-radius: 51% 4% 38% 11% / 10% 40% 19% 28%; transform: translate3d(10px,35px,0) rotate(-.5deg) rotateY(-4deg) skewY(-.7deg) scaleX(.99); }
+}
+@keyframes kenyaFabricLight {
+  from { transform: translateX(-22%); }
+  to { transform: translateX(22%); }
+}
+@keyframes kenyaFlagSheen {
+  from { transform: translateX(-32%) skewX(-5deg); }
+  to { transform: translateX(24%) skewX(4deg); }
+}
+
+@media (max-width: 900px) {
+  .kenya-flag-veil { inset: 0; width: 100%; height: 100%; opacity: .075; }
+}
+
+@media (max-width: 600px) {
+  .kenya-flag-veil { inset: 0; width: 100%; height: 100%; opacity: .07; }
+  .about::before { height: 135px; }
+  .about::after { height: 22px; filter: blur(10px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kenya-flag-fabric, .kenya-flag-fabric::before, .kenya-flag-fabric::after { animation: none; }
+}
+
+/* Floating glass navigation */
+header { position: sticky; z-index: 50; top: -38px; padding-bottom: 14px; background: transparent; pointer-events: none; }
+.utility-bar, .navbar { pointer-events: auto; }
+.utility-bar { position: relative; z-index: 2; }
+.navbar { position: relative; z-index: 3; width: min(1180px,calc(100% - 48px)); height: 78px; margin-top: 14px; padding: 0 20px; border: 1px solid rgba(255,255,255,.82); border-radius: 18px; background: linear-gradient(115deg,rgba(255,255,255,.82),rgba(255,255,255,.58)); box-shadow: 0 18px 48px rgba(9,11,85,.12),inset 0 1px 0 rgba(255,255,255,.95); backdrop-filter: blur(22px) saturate(145%); -webkit-backdrop-filter: blur(22px) saturate(145%); }
+.navbar::before { content: ""; position: absolute; top: 0; right: 8%; left: 8%; height: 1px; background: linear-gradient(90deg,transparent,rgba(255,255,255,1),transparent); pointer-events: none; }
+.navbar::after { content: ""; position: absolute; z-index: -1; right: 7%; bottom: -12px; left: 7%; height: 24px; border-radius: 50%; background: rgba(9,11,85,.12); filter: blur(16px); pointer-events: none; }
+.navbar .nav-links a { padding: 27px 0; }
+.navbar .nav-links a::after { bottom: 18px; }
+.nav-donate { border: 1px solid rgba(255,255,255,.24); box-shadow: 0 10px 24px rgba(227,19,37,.24),inset 0 1px 0 rgba(255,255,255,.3); }
+
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  .navbar { background: rgba(255,255,255,.96); }
+}
+
+@media (max-width: 900px) {
+  header { padding-bottom: 10px; }
+  .navbar { width: calc(100% - 30px); height: 70px; margin-top: 10px; padding: 0 12px 0 15px; border-radius: 15px; }
+  .navbar .nav-links { top: calc(100% + 10px); right: 0; left: 0; max-height: calc(100vh - 130px); border: 1px solid rgba(255,255,255,.82); border-radius: 15px; background: rgba(255,255,255,.9); box-shadow: 0 22px 50px rgba(9,11,85,.18); backdrop-filter: blur(22px) saturate(145%); -webkit-backdrop-filter: blur(22px) saturate(145%); }
+  .navbar .nav-links a { padding: 10px 4px; }
+  .navbar .nav-links a::after { bottom: 5px; }
+}
+
+@media (max-width: 600px) {
+  header { top: -34px; }
+  .navbar { width: calc(100% - 24px); }
+  .nav-links { top: calc(100% + 10px); }
+}
+
+/* Priority details float above the page after a segment is selected. */
+.floating-focus-detail[hidden] { display: none !important; }
+.floating-focus-detail { position: fixed; z-index: 120; top: 50%; left: 50%; width: min(1060px,calc(100% - 48px)); max-height: min(76vh,720px); margin: 0; padding: 42px 44px; border: 1px solid rgba(255,255,255,.9); border-left: 5px solid #e31325; border-radius: 24px; background: linear-gradient(125deg,rgba(255,255,255,.94),rgba(248,248,253,.86)); box-shadow: 0 35px 100px rgba(5,6,56,.34),0 0 0 100vmax rgba(5,6,56,.38),inset 0 1px 0 #fff; backdrop-filter: blur(26px) saturate(145%); -webkit-backdrop-filter: blur(26px) saturate(145%); transform: translate(-50%,-50%); overflow: auto; }
+.floating-focus-detail:not([hidden]) { animation: floatingPriorityIn .48s cubic-bezier(.2,.8,.2,1) both; }
+.focus-detail-close { position: absolute; z-index: 3; top: 16px; right: 16px; display: grid; width: 38px; height: 38px; padding: 0; place-items: center; border: 1px solid rgba(9,11,85,.12); border-radius: 50%; background: rgba(255,255,255,.82); color: #090b55; cursor: pointer; font-size: 24px; line-height: 1; box-shadow: 0 8px 22px rgba(9,11,85,.12); }
+.focus-detail-close:hover, .focus-detail-close:focus-visible { border-color: #e31325; background: #e31325; color: #fff; outline: 0; }
+.focus-grid article { cursor: pointer; }
+.focus-grid article:focus-visible { outline: 3px solid rgba(227,19,37,.38); outline-offset: 4px; }
+
+@keyframes floatingPriorityIn {
+  0% { opacity: 0; transform: translate(-50%,calc(-50% + 28px)) scale(.955); box-shadow: 0 8px 30px rgba(5,6,56,0),0 0 0 100vmax rgba(5,6,56,0),inset 0 1px 0 #fff; }
+  55% { opacity: 1; transform: translate(-50%,calc(-50% - 4px)) scale(1.008); }
+  100% { opacity: 1; transform: translate(-50%,-50%) scale(1); box-shadow: 0 35px 100px rgba(5,6,56,.34),0 0 0 100vmax rgba(5,6,56,.38),inset 0 1px 0 #fff; }
+}
+
+@media (max-width: 760px) {
+  .floating-focus-detail { top: auto; right: 10px; bottom: 10px; left: 10px; width: auto; max-height: 82vh; padding: 38px 22px 26px; border-radius: 22px; transform: none; }
+  .floating-focus-detail:not([hidden]) { animation-name: floatingPriorityMobileIn; }
+  .focus-detail-close { top: 12px; right: 12px; }
+}
+
+@keyframes floatingPriorityMobileIn {
+  0% { opacity: 0; transform: translateY(55px) scale(.98); box-shadow: 0 8px 30px rgba(5,6,56,0),0 0 0 100vmax rgba(5,6,56,0),inset 0 1px 0 #fff; }
+  70% { opacity: 1; transform: translateY(-4px) scale(1); }
+  100% { opacity: 1; transform: translateY(0) scale(1); box-shadow: 0 35px 100px rgba(5,6,56,.34),0 0 0 100vmax rgba(5,6,56,.38),inset 0 1px 0 #fff; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-focus-detail, .floating-focus-detail:not([hidden]) { animation: none; scroll-behavior: auto; }
+}

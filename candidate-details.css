@@ -1,0 +1,203 @@
+.card-prompt {
+  display: block;
+  margin-top: 16px;
+  color: #e31325;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.focus-strip {
+  padding: 100px 0;
+  background: #fafafd;
+}
+
+.focus-grid {
+  transform: none;
+}
+
+.focus-intro {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 8%;
+  align-items: end;
+  margin-bottom: 45px;
+}
+
+.focus-intro .kicker {
+  grid-column: 1 / -1;
+  margin-bottom: -20px;
+}
+
+.focus-intro h2 {
+  margin: 0;
+  color: #11132d;
+  font: 800 clamp(42px, 4.8vw, 64px)/0.98 "Libre Franklin", sans-serif;
+  letter-spacing: -0.06em;
+}
+
+.focus-intro h2 em {
+  color: #e31325;
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.focus-intro > p:last-child {
+  margin: 0;
+  color: #697083;
+  font-size: 13px;
+}
+
+.focus-grid article.featured .card-prompt {
+  color: #fff;
+}
+
+.focus-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  margin-top: 14px;
+  padding: 36px 42px;
+  border-left: 5px solid #e31325;
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(9, 11, 85, 0.1);
+}
+
+.focus-detail-overview,
+.focus-detail-actions {
+  min-width: 0;
+}
+
+.focus-detail-label {
+  color: #e31325;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.focus-detail h3 {
+  margin: 8px 0 10px;
+  color: #090b55;
+  font: 800 25px "Libre Franklin", sans-serif;
+}
+
+.focus-detail p,
+.focus-detail li {
+  color: #697083;
+  font-size: 12px;
+}
+
+.focus-detail-list {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding-left: 20px;
+  align-content: center;
+}
+
+.focus-detail-actions > strong,
+.detail-context strong,
+.detail-outcome strong {
+  color: #090b55;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.detail-context,
+.detail-outcome {
+  margin-top: 22px;
+  padding-top: 17px;
+  border-top: 1px solid #e7e7ef;
+}
+
+.detail-context p,
+.detail-outcome p {
+  margin: 7px 0 0;
+}
+
+.focus-detail-actions .focus-detail-list {
+  margin-top: 12px;
+}
+
+.focus-detail-list li::marker,
+.commitment-details li::marker {
+  color: #e31325;
+}
+
+.detail-pulse {
+  animation: detailPulse 0.35s ease;
+}
+
+@keyframes detailPulse {
+  from { opacity: 0.55; transform: translateY(7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.commitment-toggle {
+  display: flex;
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 0 0;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  border-top: 1px solid #e7e7ef;
+  background: transparent;
+  color: #090b55;
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.commitment-toggle span {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e31325;
+  color: #fff;
+  font-size: 16px;
+}
+
+.commitment-details {
+  padding-top: 10px;
+}
+
+.commitment-details ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.commitment-details li {
+  color: #697083;
+  font-size: 11px;
+}
+
+@media (max-width: 760px) {
+  .focus-intro {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .focus-intro .kicker {
+    margin-bottom: 0;
+  }
+
+  .focus-detail {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 28px 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detail-pulse { animation: none; }
+}

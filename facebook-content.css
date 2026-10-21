@@ -1,0 +1,102 @@
+.facebook-about-visual {
+  min-height: 540px;
+  background: #dfe2ec;
+}
+
+.facebook-about-visual > img {
+  width: 100%;
+  height: 100%;
+  min-height: 540px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.facebook-photo-label {
+  position: absolute;
+  right: 26px;
+  bottom: 25px;
+  left: 26px;
+  z-index: 2;
+  display: grid;
+  padding: 18px 76px 18px 20px;
+  background: rgba(9, 11, 85, 0.92);
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+.facebook-photo-label small {
+  color: #ff8993;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.facebook-photo-label strong {
+  font: 700 15px "Libre Franklin", sans-serif;
+}
+
+.facebook-photo-label span {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  padding: 6px 9px;
+  background: #e31325;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+}
+
+.about-page-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin: 25px 0;
+  background: #e7e7ef;
+  border: 1px solid #e7e7ef;
+}
+
+.about-page-facts div {
+  display: flex;
+  padding: 15px 12px;
+  background: #fafafd;
+  flex-direction: column;
+}
+
+.about-page-facts strong {
+  color: #090b55;
+  font: 800 20px "Libre Franklin", sans-serif;
+}
+
+.about-page-facts span {
+  color: #767b8c;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-note {
+  max-width: 520px;
+  margin: 12px 0 0;
+  color: #7a7f8f;
+  font-size: 11px;
+}
+
+@media (max-width: 560px) {
+  .facebook-about-visual,
+  .facebook-about-visual > img {
+    min-height: 430px;
+  }
+
+  .facebook-photo-label {
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+  }
+
+  .about-page-facts {
+    grid-template-columns: 1fr;
+  }
+}
